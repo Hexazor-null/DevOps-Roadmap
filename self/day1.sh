@@ -1,7 +1,7 @@
 #!/bin/bash
 
 INPUT="$1"
-LOGS="/home/m4rz0/DevOps/self/logs/monitor.log"
+LOGS="$(PATH)" #-> change with your path
 
 if ! systemctl is-active --quiet "$INPUT"; then
 	echo "$(date "+%Y-%m-%d %H-%M-%S") $1 is DOWN" >> "$LOGS"
